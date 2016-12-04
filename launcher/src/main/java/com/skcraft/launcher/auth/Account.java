@@ -9,6 +9,7 @@ package com.skcraft.launcher.auth;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.base.Strings;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NonNull;
 
 import java.util.Date;
@@ -20,7 +21,9 @@ import java.util.Date;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Account implements Comparable<Account> {
 
-    private String id;
+    @Getter
+    public String id;
+
     private String password;
     private Date lastUsed;
 

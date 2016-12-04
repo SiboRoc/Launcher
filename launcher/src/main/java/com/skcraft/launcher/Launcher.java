@@ -12,6 +12,7 @@ import com.google.common.base.Strings;
 import com.google.common.base.Supplier;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
+import com.jtattoo.plaf.noire.NoireLookAndFeel;
 import com.skcraft.launcher.auth.AccountList;
 import com.skcraft.launcher.auth.LoginService;
 import com.skcraft.launcher.auth.YggdrasilLoginService;
@@ -45,6 +46,7 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 
 import static com.skcraft.launcher.util.SharedLocale.tr;
+import com.jtattoo.plaf.smart.*;
 
 /**
  * The main entry point for the launcher.
@@ -420,7 +422,8 @@ public final class Launcher {
                 try {
                     Launcher launcher = createFromArguments(args);
                     SwingHelper.setSwingProperties(tr("launcher.appTitle", launcher.getVersion()));
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                    UIManager.setLookAndFeel("com.skcraft.launcher.SiboLook"); // "com.jtattoo.plaf.noire.NoireLookAndFeel");
+                    // UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                     launcher.showLauncherWindow();
                 } catch (Throwable t) {
                     log.log(Level.WARNING, "Load failure", t);

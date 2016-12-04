@@ -7,7 +7,7 @@ jar {
 }
 
 dependencies {
-    compile 'org.projectlombok:lombok:1.12.2'
+    compile 'org.projectlombok:lombok:1.16.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.3.0'
     compile 'commons-lang:commons-lang:2.6'
     compile 'commons-io:commons-io:1.2'
@@ -15,6 +15,9 @@ dependencies {
     compile 'com.beust:jcommander:1.32'
     compile 'com.miglayout:miglayout:3.7.4'
     compile 'com.google.code.findbugs:jsr305:3.0.0'
+    // https://mvnrepository.com/artifact/com.jtattoo/JTattoo
+    compile group: 'com.jtattoo', name: 'JTattoo', version: '1.6.11'
+
 }
 
 processResources {
